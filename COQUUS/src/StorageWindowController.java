@@ -59,31 +59,31 @@ public class StorageWindowController implements Initializable {
         Storage Storage = new Storage();
 
         Storage.setImgscr("img/peppers/blackPepper.png");
-        Storage.setName("Carrot");
+        Storage.setName("Black Pepper");
         Storage.setQuantity(5);
         ls.add(Storage);
 
         Storage = new Storage();
-        Storage.setImgscr("img/Vegetables/cucumber.png");
-        Storage.setName("Cucumber");
+        Storage.setImgscr("img/peppers/chilli-pepper-powder.png");
+        Storage.setName("Chilli peper powder");
         Storage.setQuantity(7);
         ls.add(Storage);
 
         Storage = new Storage();
-        Storage.setImgscr("img/Vegetables/lettus.png");
-        Storage.setName("Lettus");
+        Storage.setImgscr("img/peppers/fish-pepper-powder.png");
+        Storage.setName("fish pepper powder");
         Storage.setQuantity(4);
         ls.add(Storage);
 
         Storage = new Storage();
-        Storage.setImgscr("img/Vegetables/onion.png");
-        Storage.setName("Onion");
+        Storage.setImgscr("img/peppers/paprika.png");
+        Storage.setName("Paprika");
         Storage.setQuantity(10);
         ls.add(Storage);
 
         Storage = new Storage();
-        Storage.setImgscr("img/Vegetables/tomato.png");
-        Storage.setName("Tomato");
+        Storage.setImgscr("img/peppers/WhitePepper.png");
+        Storage.setName("White Pepper");
         Storage.setQuantity(14);
         ls.add(Storage);
 
