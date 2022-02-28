@@ -6,17 +6,17 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch App",
+            "request": "launch",
+            "mainClass": "App",
+            "projectName": "COQUUS_12cd6133",
+            "vmArgs": "--module-path \"COQUUS/lib\" --add-modules javafx.controls,javafx.fxml"
+        },
+        {
+            "type": "java",
             "name": "Launch Current File",
             "request": "launch",
             "mainClass": "${file}"
         },
-        {
-            "type": "java",
-            "name": "Launch App",
-            "request": "launch",
-            "mainClass": "App",
-            "projectName": "JavaProject_aaf43506",
-            "vmArgs": "--module-path \"COQUUS/lib\" --add-modules javafx.controls,javafx.fxml"
-        }
     ]
 }

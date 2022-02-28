@@ -57,4 +57,18 @@ public class SceneController {
     stage.setScene(scene);
     stage.show();
    }
+   public void switchToLoginPage(MouseEvent event) throws IOException {
+      Parent root = FXMLLoader.load(getClass().getResource("LoginPage.fxml"));
+      stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+      scene = new Scene(root);
+      stage.setScene(scene);
+      stage.show();
+   }
+   public void switchToSignupPage(MouseEvent event) throws IOException {
+      Parent root = FXMLLoader.load(getClass().getResource("SignupPage.fxml"));
+      stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+      scene = new Scene(root);
+      stage.setScene(scene);
+      stage.show();
+   }
 }

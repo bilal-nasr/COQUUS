@@ -12,7 +12,7 @@ public class App extends Application {
        
         Parent root;
         try {
-            root = FXMLLoader.load(getClass().getResource("MainScene.fxml"));
+            root = FXMLLoader.load(getClass().getResource("LoginPage.fxml"));
             
             stage.setTitle("COQUUS");
             stage.setScene(new Scene(root));

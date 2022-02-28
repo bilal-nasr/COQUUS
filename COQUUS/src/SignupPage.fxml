@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="434.0" prefWidth="645.0" style="-fx-background-color: #a80000;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SignupPageController">
+   <children>
+      <ImageView fitHeight="248.0" fitWidth="284.0" layoutX="88.0" layoutY="93.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/cocuuqLogo.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="email" layoutX="336.0" layoutY="192.0" />
+      <Label layoutX="336.0" layoutY="162.0" text="Email" textFill="WHITE" wrapText="true">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="336.0" layoutY="217.0" text="Password" textFill="WHITE" wrapText="true">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <PasswordField fx:id="password" layoutX="336.0" layoutY="247.0" />
+      <Button layoutX="42.0" layoutY="34.0" mnemonicParsing="false" onMouseClicked="#backToLogin" text="Back" />
+      <Button layoutX="338.0" layoutY="284.0" mnemonicParsing="false" onMouseClicked="#SignUp" text="Sign Up" />
+      <TextField fx:id="username1" layoutX="336.0" layoutY="137.0" />
+      <Label layoutX="336.0" layoutY="107.0" text="Username" textFill="WHITE" wrapText="true">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>
