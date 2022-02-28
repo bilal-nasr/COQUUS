@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
@@ -16,10 +15,10 @@
           <children>
             <Pane prefHeight="56.0" prefWidth="709.0">
                <children>
-                  <Label layoutX="97.0" layoutY="35.0" text="Recipe Name" />
-                  <Label layoutX="96.0" layoutY="9.0" prefHeight="25.0" prefWidth="72.0" text="User Name" />
+                  <TextField fx:id="UserId" layoutX="65.0" layoutY="16.0" promptText="UserId" />
                   <Button layoutX="14.0" layoutY="13.0" mnemonicParsing="false" onMouseClicked="#goBack" text="Back" />
-                  <Button alignment="CENTER" layoutX="589.0" layoutY="3.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="87.0" text="Post" textAlignment="RIGHT" />
+                  <Button fx:id="PostButton" alignment="CENTER" layoutX="589.0" layoutY="3.0" mnemonicParsing="false" onMouseClicked="#AddToDB" prefHeight="30.0" prefWidth="87.0" text="Post" textAlignment="RIGHT" />
+                  <TextField fx:id="RecipeName" layoutX="232.0" layoutY="16.0" promptText="RecipeName" />
                </children>
             </Pane>
             <Pane layoutX="-2.0" layoutY="56.0" prefHeight="233.0" prefWidth="832.0">
@@ -27,7 +26,7 @@
                   <Blend />
                </effect>
                <children>
-                  <Button layoutX="355.0" layoutY="104.0" mnemonicParsing="false" text="Add Photo" />
+                  <TextField fx:id="ImgSrc" layoutX="223.0" layoutY="78.0" prefHeight="39.0" prefWidth="201.0" promptText="Image Sorce link" />
                </children>
             </Pane>
              <Pane layoutX="10.0" layoutY="297.0" prefHeight="200.0" prefWidth="782.0">
@@ -37,7 +36,7 @@
                         <Font name="System Bold" size="24.0" />
                      </font>
                   </TextField>
-                  <TextArea layoutY="52.0" prefHeight="147.0" prefWidth="653.0" promptText="Add Ingredients ....." />
+                  <TextArea fx:id="DescriptionText" layoutY="52.0" prefHeight="147.0" prefWidth="653.0" promptText="Add Ingredients ....." />
                </children>
             </Pane>
             <Pane layoutY="524.0" prefHeight="250.0" prefWidth="797.0">

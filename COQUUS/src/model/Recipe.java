@@ -3,18 +3,18 @@ package model;
 public class Recipe {
     private String name;
     private String imgscr;
-    private String chef;
+    private int chefID;
     private String description;
 
-    public Recipe(String name,String imgscr,String chef,String description){
-        this.chef = chef;
+    public Recipe(String name,String description,String imgscr,int chefID){
+        this.chefID = chefID;
         this.imgscr = imgscr;
         this.description = description;
         this.name = name;
     }
 
-    public void setChef(String chef) {
-        this.chef = chef;
+    public void setchefID(int chefID) {
+        this.chefID = chefID;
     }
     public void setDescription(String description) {
         this.description = description;
@@ -26,8 +26,8 @@ public class Recipe {
         this.name = name;
     }
 
-    public String getChef() {
-        return chef;
+    public int getchefID() {
+        return chefID;
     }
     public String getDescription() {
         return description;

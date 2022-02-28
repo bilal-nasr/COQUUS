@@ -1,14 +1,17 @@
 import java.io.IOException;
 import java.net.URL;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
+
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import model.DBConnection;
 import model.Recipe;
 
 public class RecipeWindowController implements Initializable{
@@ -18,9 +21,9 @@ public class RecipeWindowController implements Initializable{
     @FXML
     private HBox Box;
     public void initialize(URL arg0, ResourceBundle arg1) {
-        recipes = new ArrayList<>(recipes());
+
         
-        try{
+        try{ recipes = new ArrayList<>(recipes());
             for (int i = 0; i < recipes.size(); i++) {
                 FXMLLoader fxmlloader = new FXMLLoader();
                 fxmlloader.setLocation(getClass().getResource("RecipeVerticalCard.fxml"));
@@ -41,11 +44,20 @@ public class RecipeWindowController implements Initializable{
             }catch(Exception e){
             System.out.println(e.getMessage());}
     }
-    private List<Recipe> recipes(){
+    private List<Recipe> recipes() throws SQLException{
+        DBConnection myConnection = new DBConnection();
         List<Recipe> ls = new ArrayList<>();
-
-        Recipe recipe = new Recipe("Name","img/Food/SpicyTomatodip.png","Zaynab","Hello");
-        ls.add(recipe);
+        Statement mystmt;
+        Connection conn;
+        conn= myConnection.getDbConnection();
+        mystmt = conn.createStatement();
+        
+        ResultSet myResSet = mystmt.executeQuery("select * from recipes");
+        while(myResSet.next()){
+            Recipe recipe = new Recipe(myResSet.getString("name"),myResSet.getString("description"),myResSet.getString("imgscr"),myResSet.getInt("Uid"));
+            ls.add(recipe);
+        }
+        
         return ls;
         
     }

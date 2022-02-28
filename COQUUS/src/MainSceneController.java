@@ -12,6 +12,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import model.DBConnection;
 import model.Recipe;
 import java.sql.*;
 
@@ -31,17 +32,10 @@ public class MainSceneController implements Initializable{
     
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
-        
-        try {
-            RecentlyAdded = new ArrayList<>(RecentlyAdded());
-        } catch (SQLException e1) {
-            // TODO Auto-generated catch block
-            e1.printStackTrace();
-        }
         // recommendRecipes = new ArrayList<>(Recommended());
         // int column = 0;
         // int row = 1;
-        try{
+        try{RecentlyAdded = new ArrayList<>(RecentlyAdded());
             for (int i = 0; i < RecentlyAdded.size(); i++) {
                 FXMLLoader fxmlloader = new FXMLLoader();
                 fxmlloader.setLocation(getClass().getResource("card.fxml"));
@@ -71,35 +65,28 @@ public class MainSceneController implements Initializable{
     }
 
   private List<Recipe> RecentlyAdded() throws SQLException{
-    String dbUrl = "jdbc:mysql://localhost/coquus";
-    String user = "root";
-    String pass = "";
-try {
-    Connection mycConnection = DriverManager.getConnection(dbUrl, user, pass);
-    Statement mystmt;
-    
-        mystmt = mycConnection.createStatement();
-        ResultSet myResSet = mystmt.executeQuery("select * from users");
+
+        DBConnection myConnection = new DBConnection();
+        List<Recipe> ls = new ArrayList<>();
+        Statement mystmt;
+        Connection conn;
+        conn= myConnection.getDbConnection();
+        mystmt = conn.createStatement();
+        
+        ResultSet myResSet = mystmt.executeQuery("select * from recipes");
         while(myResSet.next()){
-            System.out.println(myResSet.getString("Uid"));
-            System.out.println(myResSet.getString("Name"));
-            System.out.println(myResSet.getString("Email"));
+            Recipe recipe = new Recipe(myResSet.getString("name"),myResSet.getString("description"),myResSet.getString("imgscr"),myResSet.getInt("Uid"));
+            ls.add(recipe);
         }
-    } catch (SQLException e1) {
-        e1.printStackTrace();
-    }
-    List<Recipe> ls = new ArrayList<>();
-    //Recipe recipe = new Recipe();
     return ls;
         
     }
-  /* 
-    private List<Recipe> Recommended(){
-        List<Recipe> ls = new ArrayList<>();
-        Recipe recipe = new Recipe();
+    // private List<Recipe> Recommended(){
+    //     List<Recipe> ls = new ArrayList<>();
+    //    // Recipe recipe = new Recipe();
 
-        return ls;
-    }*/
+    //     return ls;
+    // }
     
     @FXML
     public void GoToRecipe(MouseEvent event) throws IOException {

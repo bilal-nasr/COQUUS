@@ -25,8 +25,7 @@ public class RecipeVerticalCardController {
     public void setData(Recipe recipe){
         Image image = new Image(getClass().getResourceAsStream(recipe.getImgscr()));
         VCardImg.setImage(image);
-
-        VCardChefName.setText(recipe.getChef());
+        VCardChefName.setText(""+recipe.getchefID());
         VCardRecipeName.setText(recipe.getName());
         
         if(i==colors.length){

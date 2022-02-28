@@ -32,7 +32,7 @@ public class CardController {
         Image image = new Image(getClass().getResourceAsStream(recipe.getImgscr()));
         CardImg.setImage(image);
         
-        ChefName.setText(recipe.getChef());
+        ChefName.setText(""+recipe.getchefID());
         RecipeDescription.setText(recipe.getDescription());
         RecipeName.setText(recipe.getName());
         if(i==colors.length){
