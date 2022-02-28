@@ -16,7 +16,7 @@
             "request": "launch",
             "mainClass": "App",
             "projectName": "JavaProject_aaf43506",
-            "vmArgs": "--module-path \"C:/Program Files/JavaFX/javafx-sdk-17.0.2/lib\" --add-modules javafx.controls,javafx.fxml"
+            "vmArgs": "--module-path \"COQUUS/lib\" --add-modules javafx.controls,javafx.fxml"
         }
     ]
 }
