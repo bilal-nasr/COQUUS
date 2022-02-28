@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox fx:id="VBoxCard" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="306.0" prefWidth="222.0" spacing="10.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="RecipeVerticalCardController">
+   <children>
+      <ImageView fx:id="VCardImg" fitHeight="229.0" fitWidth="221.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/Food/SpicyTomatodip.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="VCardRecipeName" text="Recipe Name" />
+      <Label fx:id="VCardChefName" text="Chef Name" />
+   </children>
+</VBox>

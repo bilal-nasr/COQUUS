@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="636.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainSceneController">
+   <top>
+      <HBox prefHeight="17.0" prefWidth="900.0" styleClass="white-background" stylesheets="@css/styles.css" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="58.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/cocuuqLogo.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" ellipsisString="" maxHeight="52.0" maxWidth="227.0" minHeight="52.0" minWidth="174.0" prefHeight="52.0" prefWidth="185.0" text="COQUUS" textAlignment="CENTER" textFill="RED">
+               <font>
+                  <Font name="Viner Hand ITC" size="26.0" />
+               </font>
+            </Label>
+            <Separator orientation="VERTICAL" prefHeight="52.0" prefWidth="0.0">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin></Separator>
+            <HBox alignment="CENTER" prefHeight="41.0" prefWidth="272.0" styleClass="round-layout" stylesheets="@css/styles.css">
+               <children>
+                  <TextField fx:id="SearchTxtField" prefHeight="29.0" prefWidth="223.0" promptText="Search" style="-fx-border-color: rgba(0,0,0,0);" styleClass="transparent" stylesheets="@../css/styles.css">
+                     <font>
+                        <Font size="16.0" />
+                     </font></TextField>
+                  <ImageView fitHeight="26.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true" HBox.hgrow="ALWAYS">
+                     <image>
+                        <Image url="@img/search.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin></ImageView>
+               </children>
+               <HBox.margin>
+                  <Insets bottom="5.0" left="20.0" right="5.0" top="5.0" />
+               </HBox.margin>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" prefHeight="52.0" prefWidth="271.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <Label ellipsisString="" prefHeight="25.0" prefWidth="107.0" text="UserName">
+                     <font>
+                        <Font name="Berlin Sans FB" size="21.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                  </Label>
+                  <ImageView fitHeight="42.0" fitWidth="104.0" onMouseClicked="#GoToUserPage" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/User.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </ImageView>
+               </children>
+               <padding>
+                  <Insets left="10.0" right="10.0" />
+               </padding>
+            </HBox>
+         </children>
+      </HBox>
+   </top>
+   <left>
+      <ScrollPane hbarPolicy="NEVER" vbarPolicy="ALWAYS" BorderPane.alignment="CENTER">
+         <content>
+            <VBox prefHeight="601.0" prefWidth="227.0" styleClass="white-background" stylesheets="@css/styles.css">
+               <children>
+                  <Label text="Browse">
+                     <font>
+                        <Font name="Berlin Sans FB" size="21.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="3.0" left="5.0" top="20.0" />
+                     </VBox.margin>
+                  </Label>
+                  <HBox alignment="CENTER" prefHeight="27.0" prefWidth="212.0" spacing="10.0" stylesheets="@css/styles.css">
+                     <children>
+                        <ImageView fitHeight="24.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/browse.png" />
+                           </image>
+                        </ImageView>
+                        <Label prefHeight="25.0" prefWidth="135.0" text="Browse">
+                           <font>
+                              <Font name="Berlin Sans FB" size="21.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                     <styleClass>
+                        <String fx:value="mouse-moved" />
+                        <String fx:value="selected" />
+                     </styleClass>
+                  </HBox>
+                  <Separator prefHeight="3.0" prefWidth="172.0">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Separator>
+                  <VBox prefHeight="601.0" prefWidth="212.0" styleClass="white-background" stylesheets="@css/styles.css">
+                     <children>
+                        <Label text="Your Food">
+                           <font>
+                              <Font name="Berlin Sans FB" size="21.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="3.0" left="5.0" top="20.0" />
+                           </VBox.margin>
+                        </Label>
+                        <HBox alignment="CENTER" onMouseClicked="#GoToRecipe" prefHeight="27.0" prefWidth="212.0" spacing="10.0" styleClass="mouse-moved" stylesheets="@css/styles.css">
+                           <children>
+                              <ImageView fitHeight="24.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@img/chefHat.png" />
+                                 </image>
+                              </ImageView>
+                              <Label prefHeight="25.0" prefWidth="135.0" text="Recipes">
+                                 <font>
+                                    <Font name="Berlin Sans FB" size="21.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="10.0" top="10.0" />
+                           </VBox.margin>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                        </HBox>
+                        <HBox alignment="CENTER" onMouseClicked="#GoToStorage" prefHeight="27.0" prefWidth="212.0" spacing="10.0" styleClass="mouse-moved" stylesheets="@css/styles.css">
+                           <children>
+                              <ImageView fitHeight="24.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@img/storageShelf.png" />
+                                 </image>
+                              </ImageView>
+                              <Label prefHeight="25.0" prefWidth="135.0" text="Storage">
+                                 <font>
+                                    <Font name="Berlin Sans FB" size="21.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                        </HBox>
+                        <Separator prefHeight="3.0" prefWidth="172.0" />
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </content>
+      </ScrollPane>
+   </left>
+   <center>
+      <VBox prefHeight="696.0" prefWidth="660.0" spacing="10.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Recently Added">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="20.0" />
+               </font>
+            </Label>
+            <ScrollPane hbarPolicy="ALWAYS" prefHeight="173.0" prefWidth="660.0" vbarPolicy="NEVER">
+               <content>
+                  <HBox fx:id="CardLayout" alignment="CENTER" prefHeight="137.0" prefWidth="196.0" spacing="20.0" />
+               </content></ScrollPane>
+            <Label text="Recommended">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="20.0" />
+               </font>
+            </Label>
+            <ScrollPane prefHeight="200.0" prefWidth="200.0" styleClass="transparent" stylesheets="@css/styles.css" VBox.vgrow="ALWAYS">
+               <content>
+                  <GridPane fx:id="RecipeContainer" prefHeight="0.0" prefWidth="0.0">
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                  </GridPane>
+               </content>
+            </ScrollPane>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

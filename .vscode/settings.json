@@ -1,0 +1,19 @@
+{
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "c:\\Program Files\\JavaFX\\javafx-sdk-17.0.2\\lib\\javafx.base.jar",
+        "c:\\Program Files\\JavaFX\\javafx-sdk-17.0.2\\lib\\javafx.controls.jar",
+        "c:\\Program Files\\JavaFX\\javafx-sdk-17.0.2\\lib\\javafx.fxml.jar",
+        "c:\\Program Files\\JavaFX\\javafx-sdk-17.0.2\\lib\\javafx.graphics.jar",
+        "c:\\Program Files\\JavaFX\\javafx-sdk-17.0.2\\lib\\javafx.media.jar",
+        "c:\\Program Files\\JavaFX\\javafx-sdk-17.0.2\\lib\\javafx.swing.jar",
+        "c:\\Program Files\\JavaFX\\javafx-sdk-17.0.2\\lib\\javafx.web.jar",
+        "c:\\Program Files\\JavaFX\\javafx-sdk-17.0.2\\lib\\javafx-swt.jar",
+        "COQUUS/lib/mysql-connector-java-8.0.16.jar",
+        "COQUUS/lib/protobuf-java-3.6.1.jar"
+    ],
+    "java.project.sourcePaths": [
+        "FXtest/src",
+        "COQUUS/src"
+    ]
+}
